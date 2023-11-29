@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// import HomePage from "./Pages/HomePage";
+// import './index.css'
 
-function App() {
+// function App() {
+//   return (
+//     <div className="h-screen bg-indigo-200">
+//       <HomePage/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
+import YouTubePlayer from './Components/YouTubePlayer'
+import HomePage from './Pages/HomePage';
+import './index.css'
+
+const App = () => {
+  const videoIds = ['kX0vO4vlJuU', 'zSQ48zyWZrY', 'zsYSSVoQnP4','hLvWy2b857I', 'nOI67IDlNMQ','ISnyONG1dEc', 'kTlv5_Bs8aw']
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<HomePage/>}>
+          {/* <Button to="/play" videoId="YOUR_YOUTUBE_VIDEO_ID" /> */}
+        </Route>
+        <Route path="/play"
+        element={<YouTubePlayer videoIds={videoIds}/>}>
+          {/* Video playback page */}
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
