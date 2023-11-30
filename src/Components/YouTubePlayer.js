@@ -15,8 +15,8 @@ const VideoPlayer = ({ videoIds }) => {
   }, [videoIds]);
 
   return (
-    <div className='bg-indigo-200 h-screen'>
-        <h2 className='font-sign flex justify-center text-3xl '>STREAM FOR BETTER SKIN :)</h2>
+    <div className='bg-indigo-200 h-full'>
+        <h2 className='font-vibe flex justify-center text-3xl '>SONG FOR YOUR SIGN :) ENJOYYYY</h2>
     <div className="flex justify-center items-center h-screen ">
       <iframe
         width="640"

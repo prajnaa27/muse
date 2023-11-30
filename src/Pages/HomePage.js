@@ -6,7 +6,7 @@ import { Link, Navigate } from 'react-router-dom'
 
 export default function HomePage() {
   return (
-    <div className="flex items-center justify-center h-screen bg-indigo-200">
+    <div className="flex items-center justify-center h-full bg-indigo-200">
       <div>
      <img src={img} alt="Description of the image" class="mt-4 rounded-md mr-20"/>
      </div>
